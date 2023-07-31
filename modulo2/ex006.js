@@ -6,11 +6,18 @@
 
 Caso seja inserido um número de operação que não exista, o resultado deverá ser 0. */
 
-function calculadora (n1,n2,operação) {
-	switch(operação) {
+const readline = require('readline-sync');
+
+let n1 = readline.questionFloat("Digite o seu primeiro numero: ");
+let n2 = readline.questionFloat("Digite o seu segundo numero: ");
+
+let  operacao = readline.questionInt("Digite a operacao: ")
+
+function calculadora (n1,n2,operacao) {
+	switch(operacao) {
 	case 1: //soma
 		return n1 + n2;
-	case 2: //subtração
+	case 2: //subtracao
 		return n1 - n2;
 	case 3: // multiplicação
 		return n1 * n2;
@@ -22,4 +29,4 @@ function calculadora (n1,n2,operação) {
 	}
 }
 
-console.log('peru teu cu.');
+console.log(calculadora(n1, n2, operacao));
