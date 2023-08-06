@@ -26,9 +26,15 @@ const cand = {
   alert('Boquinha de urninha:\n-889 para o candidato X\n-847 para o candidato Y\n-515 para o candidato Z\n-0 [zero] para votar branco.')//Decidi não ficar repetindo a boquinha de urna, tava muito poluído
   
   while (true) {
+    let voto = prompt("Digite o número do candidato escolhido:");
+    voto = parseInt(voto);
+
+    while (isNaN(voto)) {
+        alert("Por favor, digite apenas números válidos para votar.");
+        voto = prompt("Digite o número do candidato escolhido:");
+        voto = parseInt(voto);
+    }
   
-    const voto = parseInt(prompt("Digite o número do candidato escolhido:")); // não fiz tratamento de erro quanto a receber palavras diferentes de números pois tudo diferente do numero vai ser lido como nulo
-    
     if (voto === cand.candidato_x ) {
       x++;
       totvoto++; // independente de onde votar o contador vai ser somado
