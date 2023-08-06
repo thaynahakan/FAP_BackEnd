@@ -27,7 +27,7 @@ const cand = {
   
   while (true) {
   
-    const voto = parseInt(prompt("Digite o número do candidato escolhido:"));
+    const voto = parseInt(prompt("Digite o número do candidato escolhido:")); // não fiz tratamento de erro quanto a receber palavras diferentes de números pois tudo diferente do numero vai ser lido como nulo
     
     if (voto === cand.candidato_x ) {
       x++;
