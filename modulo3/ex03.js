@@ -14,6 +14,6 @@ function removerPilha(num) {
 function removerLista(num) {
   return lista.pop();
 } // Lista por ordem: 0, 1, 9, 7, 3
-// a função pop é usada para retirar o ultimo elemento da lista.
+// a função pop é usada para retirar o ultimo elemento da lista. Podem ser usadas outras formas, mas foi essa a que eu escolhi.
 
 // Não finalizei o código de propósito pois era mais pra fins demonstrativos das funções.
