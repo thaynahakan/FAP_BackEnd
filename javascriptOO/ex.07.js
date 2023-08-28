@@ -59,7 +59,7 @@ const minhaConta = new Banco(conta, saldo, tipo, agencia); // Inicializando com 
 let continuar = true;
 
 while (continuar) {
-    const operacao = prompt("Qual operação você deseja realizar (1 - Depósito / 2 - Saque / 3 - Saldo / 4 - Sair)? ");
+    const operacao = prompt("Qual operação você deseja realizar (1 - Depósito / 2 - Saque / 3 - Saldo / 4 - Sair / 5- Buscar conta)? ");
 
     switch (operacao) {
         case "1":
