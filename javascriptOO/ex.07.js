@@ -22,11 +22,11 @@ class Banco {
     }
 
     buscarConta() {
-        console.log(`O número da conta é: ${this.conta}\n`);
+        console.log(`O númerinho da continha é: ${this.conta}\n`);
     }
 
     buscarSaldo() {
-        console.log(`Seu saldo atual é: ${this.saldo}\n`);
+        console.log(`Seu saldinho atual é: ${this.saldo}\n`);
     }
 
     deposito(deposito) {
@@ -35,9 +35,10 @@ class Banco {
 
     saque(saque) {
         if (saque > this.saldo) {
-            console.log("Você não tem saldo disponível suficiente pra essa operação.");
+            console.log("Melhore bicha, tu não tem nem saldo pra isso.");
         } else {
             this.saldo -= saque;
+            console.log("PARABÉNS, essa alma precisava mesmo de um dinheiro. Deus te elimine ✡")
         }
     }
 }
@@ -58,7 +59,7 @@ const minhaConta = new Banco(conta, saldo, tipo, agencia); // Inicializando com 
 let continuar = true;
 
 while (continuar) {
-    const operacao = prompt("Qual operação você deseja realizar? (1 - Depósito / 2 - Saque / 3 - Saldo / 4 - Sair)");
+    const operacao = prompt("Qual operação você deseja realizar (1 - Depósito / 2 - Saque / 3 - Saldo / 4 - Sair)? ");
 
     switch (operacao) {
         case "1":
@@ -75,6 +76,9 @@ while (continuar) {
         case "4":
             console.log("❀ Obrigada por acessar o banco Flor ✿");
             continuar = false;
+            break;
+        case "5":
+            banco.buscarConta();
             break;
         default:
             console.log("Operação inválida. Por favor, escolha '1', '2', '3' ou '4'.");
