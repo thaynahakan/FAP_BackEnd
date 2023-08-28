@@ -78,7 +78,7 @@ while (continuar) {
             continuar = false;
             break;
         case "5":
-            banco.buscarConta();
+            minhaConta.buscarConta();
             break;
         default:
             console.log("Operação inválida. Por favor, escolha '1', '2', '3' ou '4'.");
