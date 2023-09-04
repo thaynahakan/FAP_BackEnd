@@ -2,15 +2,11 @@ const express = require('express')
 const app = express();
 const port = 3000;
 
-// Rota GET
-app.get('/', (req, res) => {
-    res.send('<h1>Bem-Vinde a minha API!</h1>');
-});
+const rotas = require('./routes');
 
-app.get('/json', (req,res) => {
-    res.json({title:"Nosso primeiro Server!", online: true})
-})
+app.use('/', rotas);
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log(`Servidor abrindo na porta ${port}`);
 });
+
