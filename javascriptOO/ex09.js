@@ -1,3 +1,5 @@
+//Primeiro objeto abstrado
+
 class Anime {
     constructor(nome, anoPublicacao, manga = false) {
         this.nome = nome;
@@ -45,3 +47,53 @@ meuAnime.desmarcarAssistido();// Desmarca o anime como assistido
 
 meuAnime.exibirDetalhes();// Exibe os detalhes atualizados do anime
 outroAnime.exibirDetalhes();// Exibe os detalhes atualizados do anime
+
+
+// Segundo objeto abstrato
+
+class PerfildeNamoroOnline{
+    constructor(nome, idade, genero, hobbies, descricao) {
+        this.nome = nome;
+        this.idade = idade;
+        this.genero = genero;
+        this.hobbies = hobbies || [];
+        this.descricao = descricao || '';
+        this.matches = [];
+}
+
+adicionarHobby(hobby) {
+    this.hobbies.push(hobby);
+}
+
+adicionarMatch(perfil) {
+    this.matches.push(perfil);
+}
+
+escreverDescricao(descricao) {
+    this.descricao = descricao;
+}
+
+mostrarInformacoes() {
+    console.log(`Nome: ${this.nome}`);
+    console.log(`Idade: ${this.idade}`);
+    console.log(`Gênero: ${this.genero}`);
+    console.log(`Hobbies: ${this.hobbies.join(', ')}`);
+    console.log(`Descrição: ${this.descricao}`);
+    if (this.matches.length > 0) {
+        console.log(`Matches: ${this.matches.map(match => match.nome).join(', ')}`);
+    } else {
+        console.log('Nenhum match ainda.');
+    }
+}
+}
+
+// Exemplo de uso
+const perfil1 = new PerfilDeNamoroOnline('Alice', 28, 'Feminino', ['Cinema', 'Viagens'], 'Em busca de novas aventuras.');
+const perfil2 = new PerfilDeNamoroOnline('Bob', 30, 'Masculino', ['Esportes', 'Música'], 'Gosto de praticar esportes e tocar guitarra.');
+
+perfil1.adicionarMatch(perfil2);
+perfil2.adicionarMatch(perfil1);
+
+perfil1.mostrarInformacoes();
+console.log('----------------------');
+perfil2.mostrarInformacoes();
