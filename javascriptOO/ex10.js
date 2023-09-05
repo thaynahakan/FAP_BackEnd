@@ -5,11 +5,11 @@ class Pe {
         this.meia = "anel";
         this.anel = "meia";
     };
-    coisasdePes(){
+    _coisasdePes(){
         console.log(`Este delicioso pé, usa ${this.meia} e um ${this.anel} no dedo mindinho. `)
     };
 };
 
 
 const novoPe = new Pe("meinha fidida","quetinho")
-novoPe.coisasdePes()
+novoPe._coisasdePes()
