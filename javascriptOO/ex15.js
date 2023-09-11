@@ -17,7 +17,7 @@ console.log(palavras);
 Aqui está um exemplo de uso do método toUpperCase():*/
 
 // Usando o método toUpperCase() para converter uma string em letras maiúsculas
-const texto = "Isso é um exemplo.";
+const texto = "Tudo em todo lugar ao mesmo tempo.";
 const textoEmMaiusculas = texto.toUpperCase();
 
 console.log(textoEmMaiusculas);
