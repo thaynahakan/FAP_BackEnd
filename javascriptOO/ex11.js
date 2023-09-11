@@ -1,4 +1,4 @@
-const readline = require('readline-sync');
+const prompt = require(`prompt-sync`)(); 
 
 function verificar(numero) {
     if (numero % 2 === 0) {
@@ -10,7 +10,7 @@ function verificar(numero) {
 
 
 while (true) {
-    const input = readline.question('Digite o número: ');
+    const input = prompt('Digite o número: ');
     const numero = parseInt(input);
 
     if (!isNaN(numero)) {
@@ -19,4 +19,4 @@ while (true) {
     } else {
         console.log('Entrada inválida. Por favor, digite um número inteiro.');
     }
-}
+} 
