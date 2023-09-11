@@ -7,7 +7,7 @@ Método toUpperCase(): Este método converte todos os caracteres de uma string e
 Aqui está um exemplo de uso do método split(): */
 
 // Usando o método split() para dividir uma string em um array de palavras
-const frase = "Olá, mundo! Bem-vindo à programação.";
+const frase = "Bom dia, SOL! Bem-vindo à vida.";
 const palavras = frase.split(" "); // Dividir a string usando espaço como separador
 
 console.log(palavras);
