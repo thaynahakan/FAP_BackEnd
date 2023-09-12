@@ -1,4 +1,50 @@
-//Primeiro objeto abstrado
+/* Vamos escolher dois objetos materiais e dois abstratos e listar seus atributos e métodos em JavaScript.
+
+Objetos Materiais:
+
+Carro:
+
+Atributos:
+marca: A marca do carro.
+modelo: O modelo do carro.
+ano: O ano de fabricação do carro.
+Métodos:
+ligar(): Liga o carro.
+desligar(): Desliga o carro.
+acelerar(velocidade): Acelera o carro para a velocidade especificada.
+Mesa:
+
+Atributos:
+material: O material da mesa (por exemplo, madeira, vidro, metal).
+cor: A cor da mesa.
+comprimento: O comprimento da mesa.
+Métodos:
+arrumar(): Arruma a mesa.
+limpar(): Limpa a mesa.
+aumentarComprimento(novoComprimento): Aumenta o comprimento da mesa para o valor especificado.
+Objetos Abstratos:
+
+Conta Bancária:
+
+Atributos:
+titular: O titular da conta.
+saldo: O saldo atual da conta.
+numeroConta: O número da conta.
+Métodos:
+depositar(valor): Deposita um valor na conta.
+sacar(valor): Realiza um saque da conta.
+consultarSaldo(): Retorna o saldo atual da conta.
+Agenda Telefônica:
+
+Atributos:
+contatos: Uma lista de contatos na agenda.
+proprietario: O proprietário da agenda.
+quantidadeContatos: O número de contatos na agenda.
+Métodos:
+adicionarContato(nome, numero): Adiciona um novo contato à agenda.
+removerContato(nome): Remove um contato da agenda pelo nome.
+listarContatos(): Lista todos os contatos na agenda.
+Aqui está um exemplo em JavaScript demonstrando a criação e uso de objetos com base nas definições acima: */
 
 class Anime {
     constructor(nome, anoPublicacao, manga = false) {
