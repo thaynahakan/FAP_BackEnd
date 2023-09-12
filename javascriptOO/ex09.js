@@ -46,6 +46,7 @@ removerContato(nome): Remove um contato da agenda pelo nome.
 listarContatos(): Lista todos os contatos na agenda.
 Aqui está um exemplo em JavaScript demonstrando a criação e uso de objetos com base nas definições acima: */
 
+
 class Anime {
     constructor(nome, anoPublicacao, manga = false) {
         this.nome = nome;
@@ -97,49 +98,53 @@ outroAnime.exibirDetalhes();// Exibe os detalhes atualizados do anime
 
 // Segundo objeto abstrato
 
-class PerfildeNamoroOnline{
+class PerfilDeNamoroOnline {
     constructor(nome, idade, genero, hobbies, descricao) {
-        this.nome = nome;
-        this.idade = idade;
-        this.genero = genero;
-        this.hobbies = hobbies || [];
-        this.descricao = descricao || '';
-        this.matches = [];
-}
-
-adicionarHobby(hobby) {
-    this.hobbies.push(hobby);
-}
-
-adicionarMatch(perfil) {
-    this.matches.push(perfil);
-}
-
-escreverDescricao(descricao) {
-    this.descricao = descricao;
-}
-
-mostrarInformacoes() {
-    console.log(`Nome: ${this.nome}`);
-    console.log(`Idade: ${this.idade}`);
-    console.log(`Gênero: ${this.genero}`);
-    console.log(`Hobbies: ${this.hobbies.join(', ')}`);
-    console.log(`Descrição: ${this.descricao}`);
-    if (this.matches.length > 0) {
-        console.log(`Matches: ${this.matches.map(match => match.nome).join(', ')}`);
-    } else {
-        console.log('Nenhum match ainda.');
+      this.nome = nome;
+      this.idade = idade;
+      this.genero = genero;
+      this.hobbies = hobbies || [];
+      this.descricao = descricao || '';
+      this.matches = [];
     }
-}
-}
-
-// Exemplo de uso
-const perfil1 = new PerfilDeNamoroOnline('Alice', 28, 'Feminino', ['Cinema', 'Viagens'], 'Em busca de novas aventuras.');
-const perfil2 = new PerfilDeNamoroOnline('Bob', 30, 'Masculino', ['Esportes', 'Música'], 'Gosto de praticar esportes e tocar guitarra.');
-
-perfil1.adicionarMatch(perfil2);
-perfil2.adicionarMatch(perfil1);
-
-perfil1.mostrarInformacoes();
-console.log('----------------------');
-perfil2.mostrarInformacoes();
+  
+    adicionarHobby(hobby) {
+      if (!this.hobbies.includes(hobby)) {
+        this.hobbies.push(hobby);
+      }
+    }
+  
+    adicionarMatch(perfil) {
+      if (!this.matches.includes(perfil)) {
+        this.matches.push(perfil);
+      }
+    }
+  
+    escreverDescricao(descricao) {
+      this.descricao = descricao;
+    }
+  
+    mostrarInformacoes() {
+      console.log(`Nome: ${this.nome}`);
+      console.log(`Idade: ${this.idade}`);
+      console.log(`Gênero: ${this.genero}`);
+      console.log(`Hobbies: ${this.hobbies.join(', ')}`);
+      console.log(`Descrição: ${this.descricao}`);
+      if (this.matches.length > 0) {
+        console.log(`Matches: ${this.matches.map(match => match.nome).join(', ')}`);
+      } else {
+        console.log('Nenhum match ainda.');
+      }
+    }
+  }
+  
+  // Exemplo de uso
+  const perfil1 = new PerfilDeNamoroOnline('Yuri', 28, 'Feminino', ['Cinema', 'Viagens'], 'Em busca de novas aventuras ;).');
+  const perfil2 = new PerfilDeNamoroOnline('Ariel', 30, 'Masculino', ['Esportes', 'Música'], 'Gosto de praticar esportes e cantar.');
+  
+  perfil1.adicionarMatch(perfil2);
+  perfil2.adicionarMatch(perfil1);
+  
+  perfil1.mostrarInformacoes();
+  console.log('----------------------');
+  perfil2.mostrarInformacoes();
