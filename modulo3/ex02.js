@@ -7,8 +7,8 @@ let lista = [] // lista vazia que será preenchida pelo for abaixo
 
 //esse for é para cadastrar os animais, de acordo com a quantidade dada em animais.
 for (let i = 0; i < animais; i++) { 
-  console.log("---------------------------------")
-  console.log(`Preencha os dados do ${i+1}º Totó. `) // Para fins estéticos e organizacional, pra pessoa saber quantos ja foram cadastrados
+  console.log("---------------------------------");
+  console.log(`Preencha os dados do ${i+1}º Totó. `);  // Para fins estéticos e organizacional, pra pessoa saber quantos ja foram cadastrados
   const nome = prompt("Qual o nome?");
   const idade = parseInt(prompt("Qual a idade?"));
   const raca = prompt("Qual a raça?");
